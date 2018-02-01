@@ -1,10 +1,10 @@
 # makeSparrowObjects
 
-makeSparroObjects is a node.js generator that does :
+makeSparrowObjects is a node.js generator that does :
 * connect to an existing and running mariadb database
 * read the table list
 * for each table, describes it
-* generates a models array of models based on table description
+* generates an array of models based on table description
 * applies an ejs template
 * generates a php file including all sparrow classes for all tables
 * add at the end of this php file a way to connect to mariadb instance and use sparrow in your php application
