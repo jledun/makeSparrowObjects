@@ -1,0 +1,30 @@
+<?php
+
+   require_once 'sparrow/sparrow.php';
+
+   <% for (let model of models ) { %>
+   Class <%= model.name %> {
+      <% for ( let prop in model.prop ) { %>public $<%= model.prop[prop] %>;
+      <% } %>
+
+      static $table = "<%= model.table %>";
+      static $id_field = "<%= model.id_field %>"; <% if ( model.name_field ) { %>
+      static $name_field = "<%= model.name_field %>";
+      <% } %>
+
+   }
+
+   <% } %>
+   function getDB( $user, $password, $host, $port, $db ) {
+      if ( !$user ) throw new Exception('User must provide a user name to connect mysqli.');
+      if ( !$password ) throw new Exception('User must provide a password to connect mysqli.');
+      if ( !$db ) throw new Exception('User must provide a database name to connect mysqli.');
+      $host = ( $host ) ? $host : 'localhost';
+      $connectionstring = 'mysqli://'.$user.":".$password."@".$host.(( $port > 0 ) ? ":".$port : "")."/".$db;
+      echo $connectionstring;
+      $sparrow = new Sparrow();
+      $sparrow->setDB('mysqli://cmsapp:Natais!@localhost/PREMIX');
+      return $sparrow;
+   }
+
+?>
