@@ -1,6 +1,6 @@
 {
   "name": "makesparrowobjects",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "extract object for Sparrow from existing database",
   "main": "makeSparrowObjects.js",
   "scripts": {
