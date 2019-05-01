@@ -43,22 +43,22 @@ $ node makeSparrowObjects.js > your_php_destination_file.php
 ```php
 <?php
 
-   include_once "your_php_destination_file.php";
+  include_once "your_php_destination_file.php";
 
-   // getDB is a public function
-   $myDB = getDB( 'dbuser', 'dbpassword', 'dbhost', dbport, 'database' );
+  // getDB is a public function
+  $myDB = getSparrowedDB('dbuser', 'dbpassword', 'dbhost', dbport, 'database');
 
-   // use Sparrow with objects ?
-   $myDB->using( 'my_table_name' ); 
-   echo "<pre>".print_r( $myDB->find(), true )."</pre>";
+  // use Sparrow with objects
+  $myDB->using('my_table_name'); 
+  echo "<pre>".print_r($myDB->find(), true)."</pre>";
 
-   // or you prefer as a query builder ?
-   echo "<pre>".print_r( $myDB->from( 'my_table_name' )->select()->many(), true )."</pre>";
+  // or you prefer as a query builder
+  echo "<pre>".print_r($myDB->from('my_table_name')->select()->many(), true)."</pre>";
 
 ?>
 ```
 
-Please, see https://github.com/mikecao/sparrow for help about this sexy library.
+Please, refer to [Sparrow toolkit](https://github.com/mikecao/sparrow "mikecao/sparrow") to learn more about this sexy library.
 
 # Test
 
@@ -66,7 +66,7 @@ No tests are provided with this software :-(
 
 # MIT Licence 
 
-Copyright 2018 Julien Ledun <j.ledun@iosystems.fr>
+Copyright 2018-2019 Julien Ledun <j.ledun@iosystems.fr>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

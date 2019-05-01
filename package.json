@@ -17,8 +17,8 @@
   "author": "Julien Ledun <j.ledun@iosystems.fr> (https://iosystems.fr)",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.6.0",
-    "ejs": "^2.5.7",
+    "async": "^2.6.2",
+    "ejs": "^2.6.1",
     "mariasql": "^0.2.6"
   }
 }
